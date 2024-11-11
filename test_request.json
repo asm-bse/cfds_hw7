@@ -1,0 +1,15 @@
+[
+    {
+      "age": 45,
+      "height": 170,
+      "weight": 70,
+      "aids": 0,
+      "cirrhosis": 0,
+      "hepatic_failure": 0,
+      "immunosuppression": 1,
+      "leukemia": 0,
+      "lymphoma": 0,
+      "solid_tumor_with_metastasis": 1
+    }
+  ]
+  
