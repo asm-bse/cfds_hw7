@@ -8,6 +8,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# Configure the model using predefined methods (stored in classed)
 def train_model():
     path = "sample_diabetes_mellitus_data.csv"
     data_loader = GetAndSplitData(path)
