@@ -26,6 +26,13 @@ To train the pre-configured model, execute the following command:
 curl -X POST http://127.0.0.1:8000/train_model
 ```
 
+### Predict using .py File
+To make predictions using .py file (which should include data to predict):
+
+```bash
+python3 run_request.py
+```
+
 ### Predict for Data from File
 To make predictions using data from the `test_request.json` file:
 
