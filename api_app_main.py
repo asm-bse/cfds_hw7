@@ -21,7 +21,17 @@ class PredictionInput(BaseModel):
     lymphoma: int
     solid_tumor_with_metastasis: int
 
-# Endpoint to handle model predictions
+
+@app.post("/train_model")
+async def train_model_endpoint():
+    try:
+        train_model()
+        return {"message": "Model trained successfully"}
+    except Exception as e:
+        logging.error("Model training failed", exc_info=True)
+        return {"error": f"Model training failed: {str(e)}"}
+
+
 @app.post("/predict")
 async def predict(input_data: List[PredictionInput]):
     model_filename = "random_forest_model.pkl"
@@ -43,13 +53,3 @@ async def predict(input_data: List[PredictionInput]):
         raise HTTPException(status_code=500, detail="Prediction failed")
 
     return {"predictions": predictions.tolist()}
-
-# Endpoint to handle model training
-@app.post("/train_model")
-async def train_model_endpoint():
-    try:
-        train_model()
-        return {"message": "Model trained successfully"}
-    except Exception as e:
-        logging.error("Model training failed", exc_info=True)
-        return {"error": f"Model training failed: {str(e)}"}

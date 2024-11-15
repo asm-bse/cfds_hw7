@@ -3,7 +3,7 @@
       "age": 45,
       "height": 170,
       "weight": 70,
-      "aids": 0,
+      "aids": 1,
       "cirrhosis": 0,
       "hepatic_failure": 0,
       "immunosuppression": 1,
